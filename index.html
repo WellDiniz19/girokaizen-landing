@@ -18,6 +18,7 @@
             color: #333333;
             min-height: 100vh;
             display: flex;
+            flex-direction: column; /* Garante que o container e o rodapé fiquem empilhados */
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -33,6 +34,7 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             animation: fadeInUp 1s ease-out;
+            margin-bottom: 20px; /* Margem inferior para afastar do rodapé */
         }
 
         /* Logo GiroKaizen */
@@ -73,6 +75,26 @@
             font-weight: 400;
         }
 
+        /* Rodapé de Contato */
+        footer {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #777777;
+            margin-top: 10px;
+        }
+
+        footer a {
+            color: #0c437a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #e67e22; /* Laranja inspirado na logo */
+            text-decoration: underline;
+        }
+
         /* Animação de Entrada */
         @keyframes fadeInUp {
             from {
@@ -99,18 +121,20 @@
             .logo {
                 max-width: 220px;
             }
+            footer {
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Logo Principal -->
-        
+       
 
         <!-- Ilustração baseada na imagem de referência -->
         <div class="illustration-container">
-            <!-- Caso você use a imagem gerada, salve-a como "construcao.png" e altere abaixo -->
+            <!-- Certifique-se de usar o nome correto do arquivo de imagem aqui -->
             <img src="em_construcao.png" alt="Ilustração de Site em Construção" class="illustration">
         </div>
 
@@ -118,6 +142,11 @@
         <h1>Estamos em evolução.</h1>
         <p>O novo portal <strong>GiroKaizen</strong> está chegando para oferecer uma plataforma ainda mais rápida, robusta e focada em acelerar os seus resultados. Volte em breve!</p>
     </div>
+
+    <!-- Rodapé adicionado -->
+    <footer>
+        Dúvidas ou informações? Entre em contato conosco: <a href="mailto:contato@girokaizen.com.br">contato@girokaizen.com.br</a>
+    </footer>
 
 </body>
 </html>
